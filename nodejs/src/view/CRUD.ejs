@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="/post-crud" method="post" class="row g-3 needs-validation" novalidate>
+                <div class="col-12 fs-2">Create a new user</div>
+                <div class="col-6">
+                    <label for="validationCustom01" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" required>
+                </div>
+                <div class="col-6">
+                    <label for="validationCustom02" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" required>
+                </div>
+                <div class="col-6">
+                    <label for="validationCustom01" class="form-label">First Name</label>
+                    <input type="text" class="form-control" name="firstName" required>
+                </div>
+                <div class="col-6">
+                    <label for="validationCustom02" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" required>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustom02" class="form-label">Address</label>
+                    <input type="text" class="form-control" name="address" required>
+                </div>
+                <div class="col-6">
+                    <label for="validationCustom03" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" name="phoneNumber" required>
+                </div>
+                <div class="col-3">
+                    <label for="validationCustom04" class="form-label">Sex</label>
+                    <select class="form-select" name="gender" required>
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="validationCustom05" class="form-label">Role</label>
+                    <select class="form-select" name="roleID" required>
+                        <option value="1">Admin</option>
+                        <option value="2">Doctor</option>
+                        <option value="3">Patient</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
