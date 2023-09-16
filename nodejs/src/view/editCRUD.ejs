@@ -16,8 +16,9 @@
 <body>
     <div class="container">
         <div class="row">
-            <form action="/put-crud" method="PUT" class="row g-3 needs-validation" novalidate>
+            <form action="/put-crud" method="post" class="row g-3 needs-validation" novalidate>
                 <div class="col-12 fs-2">Edit User Information</div>
+                <input style="display: none;" name="id" value="<%=dataUser.id%>" />
                 <div class="col-6">
                     <label for="validationCustom01" class="form-label">First Name</label>
                     <input type="text" class="form-control" name="firstName" value="<%=dataUser.firstName%>" required>

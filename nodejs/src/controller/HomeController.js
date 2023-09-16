@@ -28,7 +28,6 @@ let postCRUD = async (req, res) => {
 }
 let displayGetCRUD = async (req, res) => {
     let data = await CRUDservices.getAllUsers();
-    console.log(data);
     return res.render('getCRUD.ejs', { dataUsers: data })
 }
 
@@ -44,6 +43,12 @@ let editCRUD = async (req, res) => {
         return res.send('dont find')
 }
 
+let putCRUD = async (req, res) => {
+    let dataChange = req.body
+    let allUsers = await CRUDservices.updateUserData(dataChange)
+    return res.render('getCRUD.ejs', { dataUsers: allUsers })
+}
+
 module.exports = {
     getHomePage: getHomePage,
     getAboutPage: getAboutPage,
@@ -51,4 +56,5 @@ module.exports = {
     postCRUD: postCRUD,
     displayGetCRUD: displayGetCRUD,
     editCRUD: editCRUD,
+    putCRUD: putCRUD,
 }
