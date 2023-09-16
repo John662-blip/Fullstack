@@ -32,10 +32,23 @@ let displayGetCRUD = async (req, res) => {
     return res.render('getCRUD.ejs', { dataUsers: data })
 }
 
+let editCRUD = async (req, res) => {
+    let userId = req.query.id
+    if (userId) {
+        let userData = await CRUDservices.getUserDataById(userId)
+        return res.render('editCRUD.ejs', {
+            dataUser: userData
+        })
+    }
+    else
+        return res.send('dont find')
+}
+
 module.exports = {
     getHomePage: getHomePage,
     getAboutPage: getAboutPage,
     getCRUD: getCRUD,
     postCRUD: postCRUD,
     displayGetCRUD: displayGetCRUD,
+    editCRUD: editCRUD,
 }

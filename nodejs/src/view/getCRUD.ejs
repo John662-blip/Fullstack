@@ -10,6 +10,21 @@
         th,
         td {
             border: 1px solid black;
+            text-align: center;
+        }
+
+        .btn_edit,
+        .btn_delete {
+            display: inline-block;
+            background-color: orange;
+            border-radius: 3px;
+            text-decoration: none;
+            width: 60px;
+            height: 18px;
+        }
+
+        .btn_delete {
+            background-color: red;
         }
     </style>
 </head>
@@ -24,6 +39,7 @@
             <th>Last Name</th>
             <th>Address</th>
             <th>Phone</th>
+            <th>Action</th>
         </tr>
         <% for(let i=0; i < dataUsers.length; i++) { %>
             <tr>
@@ -41,6 +57,10 @@
                 </td>
                 <td>
                     <%=dataUsers[i].phoneNumber%>
+                </td>
+                <td>
+                    <a href="/edit-crud?id=<%=dataUsers[i].id%>" class="btn_edit">Edit</a>
+                    <a href="" class="btn_delete">Delete</a>
                 </td>
             </tr>
             <%}%>
